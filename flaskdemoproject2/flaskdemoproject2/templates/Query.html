@@ -1,0 +1,19 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<div class="page-header">
+    <h1>Capital is:{%if name%}{{name}}{%else%} -- {%endif%}! <h1>
+</div>
+
+{{wtf.quick_form(form)}}
+
+<div class="page-header">
+    {{raw_data_table|safe}}
+</div>
+
+
+{% endblock %}
